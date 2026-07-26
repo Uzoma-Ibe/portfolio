@@ -1,4 +1,5 @@
-# Uzoma-Ibe Ikechukwu Kenneth Electrical/Electronic Engineer | Metering & Regulatory Audit Specialist | Data Analyst | Founder, MegaWrites
+# Uzoma-Ibe Ikechukwu Kenneth
+Electrical/Electronic Engineer | Metering & Regulatory Audit Specialist | Data Analyst | Founder, MegaWrites
 ## About Me
 I am a versatile professional with over 6 years of experience spanning electrical engineering field operations, metering and regulatory auditing in the power and oil & gas sectors, data analysis, and professional writing and documentation services.
 ## Power Sector & Metering Experience
