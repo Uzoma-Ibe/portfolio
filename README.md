@@ -8,6 +8,14 @@ I am a versatile professional with over 6 years of experience spanning electrica
 - Engineering Assistant, Emetch Energy Services Ltd (TCN Metering Audit)
 ## Oil & Gas / Regulatory Audit Experience 
 - Metering Engineer/Auditor, PE Energy — Engineering Audit of Upstream Measurement Equipment for the Nigerian Upstream Petroleum Regulatory Commission (NUPRC)
-## Data Analysis Skills: Microsoft Excel, Power BI, IBM SPSS, Google Sheets, data cleaning and validation, KPI reporting, dashboard development.
-## Writing & Documentation — MegaWrites Founder and Lead Writer at MegaWrites, providing technical reports, academic writing, business proposals, and LinkedIn Profile Optimisation to clients.
+## Data Analysis Skills
+- Microsoft Excel
+- Power BI
+- IBM SPSS
+- Google Sheets
+- Data cleaning and validation
+- KPI reporting
+- Dashboard development
+## Writing & Documentation
+— MegaWrites Founder and Lead Writer at MegaWrites, providing technical reports, academic writing, business proposals, and LinkedIn Profile Optimisation to clients.
 ## Contact Email: megadiimaris@gmail.com LinkedIn: linkedin.com/in/uzoma-ibe-ikechukwu-kenneth-26694ba6
