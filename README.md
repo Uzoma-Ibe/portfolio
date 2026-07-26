@@ -19,4 +19,5 @@ I am a versatile professional with over 6 years of experience spanning electrica
 - Dashboard development
 ## Writing & Documentation
 — MegaWrites Founder and Lead Writer at MegaWrites, providing technical reports, academic writing, business proposals, and LinkedIn Profile Optimisation to clients.
-## Contact Email: megadiimaris@gmail.com LinkedIn: linkedin.com/in/uzoma-ibe-ikechukwu-kenneth-26694ba6
+## Contact Email: megadiimaris@gmail.com
+## LinkedIn: linkedin.com/in/uzoma-ibe-ikechukwu-kenneth-26694ba6
