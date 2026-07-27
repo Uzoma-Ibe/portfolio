@@ -37,14 +37,12 @@ Here are the projects that showcase my diverse experience across data, engineeri
 
 | # | Project | Role | Core Skills |
 | :---: | :--- | :--- | :--- |
-| 1 | [NUPRC Oil & Gas Metering Audit](#) | Metering Engineer / Audit Data Analyst | Regulatory Compliance, Data Validation, Discrepancy Analysis |
-| 2 | [Utility Operations Data Quality Management](#) | Engineer / MIS & Data Quality Officer | Data Cleaning, KPI Reporting, Data Governance |
-| 3 | [TCN Transmission Metering Audit](#) | Engineering Assistant - Metering Specialist | Technical Auditing, Accuracy Verification, Process Compliance |
-| 4 | [Asset & Customer Enumeration Field Project](#) | Field Manager | GIS Mapping, Field Data Collection, Quality Assurance |
-| 5 | [MegaWrites – Technical Documentation Business](#) | Founder & Lead Writer | Business Management, Technical Writing, Quality Control |
-| 6 | [Public Dataset Analysis](#) | Data Analyst (Self-Initiated) | End-to-End Analytics, Dashboard Development, Insight Generation |
-
-*[Click on each project to see the full details]*
+| 1 | [NUPRC Oil & Gas Metering Audit](https://github.com/megamindz/nuprc-oil-gas-metering-audit) | Metering Engineer / Audit Data Analyst | Regulatory Compliance, Data Validation, Discrepancy Analysis |
+| 2 | [Utility Operations Data Quality Management](https://github.com/megamindz/utility-data-quality-management) | Engineer / MIS & Data Quality Officer | Data Cleaning, KPI Reporting, Data Governance |
+| 3 | [TCN Transmission Metering Audit](https://github.com/megamindz/tcn-transmission-metering-audit) | Engineering Assistant - Metering Specialist | Technical Auditing, Accuracy Verification, Process Compliance |
+| 4 | [Asset & Customer Enumeration Field Project](https://github.com/megamindz/asset-customer-enumeration-field-data) | Field Manager | GIS Mapping, Field Data Collection, Quality Assurance |
+| 5 | [MegaWrites – Technical Documentation Business](https://github.com/megamindz/megawrites-technical-documentation) | Founder & Lead Writer | Business Management, Technical Writing, Quality Control |
+| 6 | [Data Analysis Class Project – Dashboard & Pivot Tables](https://github.com/megamindz/data-analysis-dashboard-pivot-tables) | Data Analyst (Student Project) | Excel Dashboard, Pivot Tables, Insight Generation |
 
 ---
 
