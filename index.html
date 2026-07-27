@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzoma-Ibe Ikechukwu Kenneth | Data Analyst | Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a1628;
+            color: #e8edf5;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* ========== ENGINEERING GRID BACKGROUND ========== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                /* Circuit board lines */
+                linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                /* Data dots pattern */
+                radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 80% 50%, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px, 30px 30px, 30px 30px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ========== GLOW ORB EFFECT (Tech/Data Vibe) ========== */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== HEADER / HERO ========== */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-badge {
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 100px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: #60a5fa;
+        }
+
+        .hero-badge .icon {
+            margin-right: 6px;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #2563eb, #06b6d4, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            font-weight: 400;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .hero .subtitle .divider {
+            color: #2563eb;
+            font-weight: 300;
+        }
+
+        .hero .description {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            max-width: 580px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #e8edf5;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #60a5fa;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(37, 99, 235, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* ========== TECH BADGE ROW ========== */
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .tech-badge {
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.12);
+            border-radius: 50px;
+            padding: 0.3rem 1rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #60a5fa;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        /* ========== STATS ========== */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            margin: 3rem 0 4rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(37, 99, 235, 0.15);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(37, 99, 235, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .about h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: #e8edf5;
+        }
+
+        .about h2 .accent {
+            color: #2563eb;
+        }
+
+        .about p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        /* ========== SKILLS ========== */
+        .skills-section {
+            margin-bottom: 3rem;
+        }
+
+        .skills-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+            color: #e8edf5;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .skill-tag {
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            border-radius: 50px;
+            padding: 0.5rem 1.3rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.3);
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+
+        .skill-tag.active {
+            background: rgba(37, 99, 235, 0.2);
+            border-color: rgba(37, 99, 235, 0.3);
+            color: #60a5fa;
+        }
+
+        /* ========== PROJECTS ========== */
+        .projects-section {
+            margin-bottom: 3rem;
+        }
+
+        .projects-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #e8edf5;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(37, 99, 235, 0.08);
+            border-radius: 16px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Engineering accent line on project cards */
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #2563eb, #06b6d4);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .project-card:hover {
+            background: rgba(37, 99, 235, 0.05);
+            border-color: rgba(37, 99, 235, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            padding-left: 0.5rem;
+        }
+
+        .project-card h3 a {
+            color: #e8edf5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-card h3 a:hover {
+            color: #60a5fa;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            padding-left: 0.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.6rem;
+            padding-left: 0.5rem;
+        }
+
+        .project-tag {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            border-radius: 50px;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #60a5fa;
+        }
+
+        /* ========== CONTACT ========== */
+        .contact-section {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .contact-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: #e8edf5;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .contact-links a:hover {
+            color: #60a5fa;
+            border-bottom-color: #2563eb;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            text-align: center;
+            color: #475569;
+            font-size: 0.85rem;
+        }
+
+        .footer .heart {
+            color: #2563eb;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero .description {
+                font-size: 0.95rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .about {
+                padding: 1.5rem;
+            }
+
+            .project-card {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .contact-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .stat-number {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== HERO ===== -->
+        <header class="hero">
+            <span class="hero-badge">
+                <span class="icon">📍</span> Remote · UTC+1 · Open to Global Teams
+            </span>
+            <h1>
+                Uzoma-Ibe<br>
+                <span class="highlight">Ikechukwu Kenneth</span>
+            </h1>
+            <div class="subtitle">
+                <span>Data Analyst</span>
+                <span class="divider">✦</span>
+                <span>Electrical Engineer</span>
+                <span class="divider">✦</span>
+                <span>Field Operations Manager</span>
+                <span class="divider">✦</span>
+                <span>Technical Writer</span>
+            </div>
+            <p class="description">
+                I turn complex operational and technical data into clear, actionable business insights.
+                With over 6 years of experience across engineering, consulting, and regulatory environments.
+            </p>
+            <div class="tech-badges">
+                <span class="tech-badge">⚡ Excel</span>
+                <span class="tech-badge">📊 Power BI</span>
+                <span class="tech-badge">🔧 Engineering</span>
+                <span class="tech-badge">📈 Analytics</span>
+                <span class="tech-badge">🌐 GIS</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+                <a href="https://github.com/Uzoma-Ibe" class="btn btn-secondary">GitHub</a>
+                <a href="https://www.linkedin.com/in/uzoma-ibe-ikechukwu-kenneth-26694ba6" class="btn btn-secondary">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- ===== STATS ===== -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">On-Time Delivery</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">161K+</div>
+                <div class="stat-label">Assets Enumerated</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">146K+</div>
+                <div class="stat-label">Customers Enumerated</div>
+            </div>
+        </div>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="about">
+            <h2>🧠 About <span class="accent">Me</span></h2>
+            <p>
+                I'm a detail-oriented <strong style="color:#60a5fa;">Data Analyst</strong> with over 6 years of experience collecting, cleaning, validating,
+                and analyzing operational and technical data across engineering, consulting, and regulatory environments.
+                I'm proficient in <strong style="color:#60a5fa;">Microsoft Excel</strong>, <strong style="color:#60a5fa;">Power BI</strong>,
+                <strong style="color:#60a5fa;">IBM SPSS</strong>, <strong style="color:#60a5fa;">Google Sheets</strong>, and data reporting.
+            </p>
+            <br>
+            <p>
+                I've worked on large-scale regulatory audits for <strong style="color:#60a5fa;">NUPRC</strong>, data quality management for
+                <strong style="color:#60a5fa;">Jos Electricity Distribution Plc</strong>, and led field enumeration projects covering over
+                <strong style="color:#60a5fa;">160,000 assets</strong> and <strong style="color:#60a5fa;">146,000 customers</strong>.
+            </p>
+            <br>
+            <p>
+                I'm passionate about transforming complex datasets into accurate reports and actionable business insights
+                that drive operational excellence and strategic decision-making.
+            </p>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="skills-section">
+            <h2>🛠️ Technical <span style="color:#2563eb;">Toolkit</span></h2>
+            <div class="skills-grid">
+                <span class="skill-tag active">Microsoft Excel (Advanced)</span>
+                <span class="skill-tag active">Power BI</span>
+                <span class="skill-tag">Google Sheets</span>
+                <span class="skill-tag">IBM SPSS</span>
+                <span class="skill-tag active">Data Cleaning</span>
+                <span class="skill-tag active">Data Validation</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">KPI Reporting</span>
+                <span class="skill-tag">GIS Mapping</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">Technical Writing</span>
+                <span class="skill-tag">Power Systems</span>
+                <span class="skill-tag">Metering (AMI/AMR)</span>
+                <span class="skill-tag">Calibration</span>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="projects-section" id="projects">
+            <h2>🚀 Featured <span style="color:#2563eb;">Projects</span></h2>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/Uzoma-Ibe/nuprc-oil-gas-metering-audit">NUPRC Oil & Gas Metering Audit</a></h3>
+                <p>Regulatory audit of hydrocarbon measurement systems. Data validation, discrepancy analysis, and compliance reporting for NUPRC.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Data Validation</span>
+                    <span class="project-tag">Regulatory</span>
+                    <span class="project-tag">Excel</span>
+                    <span class="project-tag">Compliance</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/Uzoma-Ibe/utility-data-quality-management">Utility Operations Data Quality Management</a></h3>
+                <p>Data quality management for Jos Electricity Distribution Plc. Data cleaning, KPI reporting, and operational insights.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Data Quality</span>
+                    <span class="project-tag">KPI Reporting</span>
+                    <span class="project-tag">Excel</span>
+                    <span class="project-tag">MIS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/Uzoma-Ibe/tcn-transmission-metering-audit">TCN Transmission Metering Audit</a></h3>
+                <p>Metering audit of transmission-distribution interfaces. Accuracy verification and commercial loss mitigation for TCN.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Technical Auditing</span>
+                    <span class="project-tag">Compliance</span>
+                    <span class="project-tag">Energy</span>
+                    <span class="project-tag">Calibration</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/Uzoma-Ibe/asset-customer-enumeration-field-data">Asset & Customer Enumeration Field Project</a></h3>
+                <p>Field data management for asset and customer enumeration. GIS mapping and quality assurance for 161K+ assets and 146K+ customers.</p>
+                <div class="project-tags">
+                    <span class="project-tag">GIS Mapping</span>
+                    <span class="project-tag">Field Operations</span>
+                    <span class="project-tag">Data Quality</span>
+                    <span class="project-tag">Leadership</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/Uzoma-Ibe/megawrites-technical-documentation">MegaWrites – Technical Documentation</a></h3>
+                <p>Technical documentation business. 150+ projects with 100% on-time delivery. Technical reports and business proposals.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Technical Writing</span>
+                    <span class="project-tag">Business</span>
+                    <span class="project-tag">Documentation</span>
+                    <span class="project-tag">Research</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://github.com/Uzoma-Ibe/data-analysis-dashboard-pivot-tables">Data Analysis Dashboard Project</a></h3>
+                <p>Excel dashboard and pivot tables project. End-to-end data analysis and visualization from class project.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Excel</span>
+                    <span class="project-tag">Dashboard</span>
+                    <span class="project-tag">Pivot Tables</span>
+                    <span class="project-tag">Visualization</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="contact-section">
+            <h2>📫 Let's <span style="color:#2563eb;">Connect</span></h2>
+            <div class="contact-links">
+                <a href="mailto:megadiamaris@gmail.com">✉️ megadiamaris@gmail.com</a>
+                <a href="https://www.linkedin.com/in/uzoma-ibe-ikechukwu-kenneth-26694ba6">🔗 LinkedIn</a>
+                <a href="https://github.com/Uzoma-Ibe">🐙 GitHub</a>
+                <a href="tel:+2348034872603">📱 +234 803 487 2603</a>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            &copy; 2026 Uzoma-Ibe Ikechukwu Kenneth &bull; Built with <span class="heart">❤️</span> on GitHub Pages
+        </footer>
+
+    </div>
+</body>
+</html>
